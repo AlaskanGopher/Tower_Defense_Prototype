@@ -5,7 +5,7 @@
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1080, 720), "SFML works!");
-    Tower testTower;
+    Tower testTower(1, 1, 100);
 
     while (window.isOpen())
     {
