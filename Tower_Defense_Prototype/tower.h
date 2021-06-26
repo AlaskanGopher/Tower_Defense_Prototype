@@ -89,17 +89,20 @@ public:
 protected:
 	void update(sf::RenderWindow & window) {
 		sf::Vector2i mousePosition = sf::Mouse::getPosition();
-		if (_attack_range >= std::sqrt(pow(mousePosition.x - (_tower.getPosition().x + (_tower.getRadius() / 2)), 2) + pow(mousePosition.y - (_tower.getPosition().y + (_tower.getRadius() / 2)), 2))) {
+		_tower.setRotation(std::atan(mousePosition.x/mousePosition.y));
+		
+		
+		//if (pow(_attack_range,2) >= pow(mousePosition.x - (_tower.getPosition().x + (_tower.getRadius() / 2)), 2) + pow(mousePosition.y - (_tower.getPosition().y + (_tower.getRadius() / 2)), 2)) {
 			if (_attack_timer.getElapsedTime().asSeconds() >= 1)
 			{
-				_bullets.push_back(Bullet(_tower.getPosition(), _tower.getRotation(), 1));
+				_bullets.push_back(Bullet(_tower.getPosition() + sf::Vector2f((_tower.getRadius() / 2) + 40, (_tower.getRadius() / 2) + 40), _tower.getRotation(), 1));
 				_attack_timer.restart();
 			}
-		}
-		else
-		{
-			_attack_timer.restart();
-		}
+		//}
+		//else
+		//{
+		//	_attack_timer.restart();
+		//}
 	}
 protected:
 	void tower_initalize() {
