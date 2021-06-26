@@ -9,6 +9,41 @@
 #define RAD_TO_DEG(rad) ((rad * 180.0f) * (1.0f / M_PI))
 #define DEG_TO_RAD(deg) ((deg * M_PI) / 180.0f)
 
+// --- CLASS BULLET ---
+// Individual Bullet, calculates position via update() function
+
+class Bullet {
+public:
+	Bullet(sf::Vector2f pos, int angle, int velocity) : _bullet_pos(pos), _bullet_angle(angle), _bullet_velocity(velocity) {
+		_bullet_sprite.setRadius(10.f);
+		_bullet_sprite.setFillColor(sf::Color::Green);
+	}
+
+	void update() {
+		_bullet_pos.x += _bullet_velocity * std::cos(DEG_TO_RAD(_bullet_angle));
+		_bullet_pos.y += _bullet_velocity * std::sin(DEG_TO_RAD(_bullet_angle));
+		_bullet_sprite.setPosition(_bullet_pos);
+	}
+
+	// Set Functions
+	void setPos(sf::Vector2f pos) { _bullet_pos = pos; }
+	void setAngle(int angle) { _bullet_angle = angle; }
+	void setVelocity(int velocity) { _bullet_velocity = velocity; }
+
+	// Get Functions
+	sf::CircleShape getSprite() { return _bullet_sprite; }
+	sf::Vector2f getPos() { return _bullet_pos; }
+	int getAngle() { return _bullet_angle; }
+	int getVelocity() { return _bullet_velocity; }
+
+
+private:
+	sf::CircleShape _bullet_sprite;
+	sf::Vector2f _bullet_pos;
+	int _bullet_angle;
+	int _bullet_velocity;
+};
+
 class Tower {
 public:
 	Tower() {
@@ -54,7 +89,7 @@ public:
 protected:
 	void update(sf::RenderWindow & window) {
 		sf::Vector2i mousePosition = sf::Mouse::getPosition();
-		if (_attack_range >= std::sqrt(pow(mousePosition.x - _tower.getOrigin().x, 2) + pow(mousePosition.y - _tower.getOrigin().y, 2))) {
+		if (_attack_range >= std::sqrt(pow(mousePosition.x - (_tower.getPosition().x + _tower.getGlobalBounds().width / 2), 2) + pow(mousePosition.y - (_tower.getPosition().y + _tower.getGlobalBounds().height / 2), 2))) {
 			if (_attack_timer.getElapsedTime().asSeconds() >= 1)
 			{
 				_bullets.push_back(Bullet(_tower.getPosition(), _tower.getRotation(), 1));
@@ -69,7 +104,6 @@ protected:
 protected:
 	void tower_initalize() {
 		_tower.setRadius(100);
-		_tower.setOrigin(_tower.getPosition().x + _tower.getGlobalBounds().width / 2, _tower.getPosition().y + _tower.getGlobalBounds().height / 2);
 		_tower.setPosition(100, 100);
 		_tower.setFillColor(sf::Color::Red);
 	}
@@ -87,40 +121,3 @@ private:
 };
 
 
-
-
-
-// --- CLASS BULLET ---
-// Individual Bullet, calculates position via update() function
-
-class Bullet {
-public:
-	Bullet(sf::Vector2f pos, int angle, int velocity) : _bullet_pos(pos), _bullet_angle(angle), _bullet_velocity(velocity) {
-		_bullet_sprite.setRadius(10.f);
-		_bullet_sprite.setFillColor(sf::Color::Green);
-	}
-
-	void update() {
-		_bullet_pos.x += _bullet_velocity * std::cos(DEG_TO_RAD(_bullet_angle));
-		_bullet_pos.y += _bullet_velocity * std::sin(DEG_TO_RAD(_bullet_angle));
-		_bullet_sprite.setPosition(_bullet_pos);
-	}
-
-	// Set Functions
-	void setPos(sf::Vector2f pos) { _bullet_pos = pos; }
-	void setAngle(int angle) { _bullet_angle = angle; }
-	void setVelocity(int velocity) { _bullet_velocity = velocity; }
-
-	// Get Functions
-	sf::CircleShape getSprite() { return _bullet_sprite; }
-	sf::Vector2f getPos() { return _bullet_pos; }
-	int getAngle() { return _bullet_angle; }
-	int getVelocity() { return _bullet_velocity; }
-
-
-private:
-	sf::CircleShape _bullet_sprite;
-	sf::Vector2f _bullet_pos;
-	int _bullet_angle;
-	int _bullet_velocity;
-};
