@@ -1,10 +1,11 @@
 #include <SFML/Graphics.hpp>
 
+#include "tower.h"
+
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    Tower testTower;
 
     while (window.isOpen())
     {
@@ -16,7 +17,7 @@ int main()
         }
 
         window.clear();
-        window.draw(shape);
+        testTower.draw(window);
         window.display();
     }
 
