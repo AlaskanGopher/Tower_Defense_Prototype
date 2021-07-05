@@ -31,3 +31,4 @@ static inline sf::Vector2f vector_unit(sf::Vector2f v) {
 	float mag = vector_magnitude(v);
 	return mag == 0.0f ? sf::Vector2f(0.0f, 0.0f) : v / mag;
 }
+
