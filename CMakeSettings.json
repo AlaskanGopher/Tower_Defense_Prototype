@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "name": "Debug",
+      "configurationType": "Debug",
+      "generator": "Ninja",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${workspaceRoot}/build/${name}",
+      "buildCommandArgs": "-v",
+      "variables": [
+        {
+          "name": "WINDOWS_HIDE_CONSOLE",
+          "value": "false",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "Release",
+      "configurationType": "Release",
+      "generator": "Ninja",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${workspaceRoot}/build/${name}",
+      "buildCommandArgs": "-v",
+      "variables": [
+        {
+          "name": "WINDOWS_HIDE_CONSOLE",
+          "value": "true",
+          "type": "bool"
+        }
+      ]
+    }
+  ]
+}
