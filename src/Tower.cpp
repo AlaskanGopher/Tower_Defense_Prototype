@@ -35,8 +35,8 @@ void Tower::spawnBullet() {
 	
 }
 
-void Tower::update(sf::Window &window) {
-	sf::Vector2i mouse_position = sf::Mouse::getPosition(window);
+void Tower::update(sf::RenderWindow &window) {
+	sf::Vector2f mouse_position = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 
 	float distance_to_mouse = std::sqrt(std::pow(_pos.x - mouse_position.x, 2) + std::pow(_pos.y - mouse_position.y, 2));
 	if (distance_to_mouse <= _attack_range) {

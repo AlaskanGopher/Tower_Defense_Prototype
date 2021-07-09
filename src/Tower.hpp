@@ -81,7 +81,7 @@ public:
 	void modifyTowerStats(Modifier mod); // Uses modifier to change base tower stats
 	void createTowerType(std::string name, int type, sf::Vector2f pos, Modifier mod); // Creates tower at pos with pre-set name and type
 	void lookAt(sf::Vector2f target);
-	void update(sf::Window &window); // Updates tower variables
+	void update(sf::RenderWindow &window); // Updates tower variables
 	float bulletUpdate(Enemy enemy); // Updates bullet variables and returns damage
 	void draw(sf::RenderWindow &window); // Draws tower
 };
