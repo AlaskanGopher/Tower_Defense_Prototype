@@ -47,7 +47,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 file(GLOB_RECURSE SRC_FILES "${PROJECT_SOURCE_DIR}/src/*.c" "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
-add_executable(Tower_Defense_Prototype ${SRC_FILES})
+add_executable(Tower_Defense_Prototype ${SRC_FILES} "src/InstanceEnemy.cpp" "src/InstanceEnemy.hpp"  )
 target_include_directories(Tower_Defense_Prototype PRIVATE ${SFML_INCLUDE_DIRS})
 target_link_libraries(Tower_Defense_Prototype PRIVATE sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
 

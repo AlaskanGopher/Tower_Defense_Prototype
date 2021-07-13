@@ -1,0 +1,95 @@
+﻿  Bullet.cpp
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(15,73): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(15,32): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(20,9): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Collision.hpp(21,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Collision.hpp(22,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Collision.hpp(23,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Collision.hpp(24,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Bullet.cpp(18,58): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Bullet.cpp(19,58): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Bullet.cpp(45,30): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Bullet.cpp(46,30): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Enemy.cpp
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(15,73): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(15,32): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(20,9): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Enemy.cpp(33,29): warning C4305: '=': truncation from 'double' to '_Ty'
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Enemy.cpp(34,29): warning C4305: '=': truncation from 'double' to '_Ty'
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Enemy.cpp(35,29): warning C4305: '=': truncation from 'double' to '_Ty'
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Enemy.cpp(106,36): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Enemy.cpp(202,31): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Main.cpp
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Tower.hpp(57,52): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Tower.cpp
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Tower.hpp(57,52): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(15,73): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(15,32): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Vectors.hpp(20,9): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Tower.cpp(22,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Tower.cpp(41,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Tower.cpp(50,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Tower.cpp(92,30): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\jackw\source\repos\Tower_Defense_Prototype\Tower_Defense_Prototype\Tower.cpp(93,30): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
+  Tower_Defense_Prototype.vcxproj -> C:\Users\jackw\Source\Repos\Tower_Defense_Prototype\x64\Debug\Tower_Defense_Prototype.exe

@@ -20,8 +20,6 @@ int main()
 	demoText.setString("hello demo text");
 
 	Modifier noModifier;
-	noModifier.toggleTowerScalarModeAndClear();
-	noModifier.setEnemyHealth(1);
 
 	std::vector<Tower> towerVector;
 	std::vector<Enemy> enemyVector;
