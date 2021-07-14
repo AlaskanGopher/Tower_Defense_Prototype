@@ -25,7 +25,7 @@ void Bullet::update() {
 
 float Bullet::checkCollision(Enemy enemy) {	
 	float damageOutput = 0;
-	if (collidingWithRadius(_pos, enemy.getPosition(), _radius, enemy.getInstanceRadius(0))) {
+	if (collidingWithRadius(_pos, enemy.getPosition(), _radius, enemy.getInstanceRadius())) {
 		damageOutput++;
 		_dead = true;
 	}

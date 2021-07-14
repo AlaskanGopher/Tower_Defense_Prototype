@@ -11,6 +11,7 @@ class Bullet {
 private:
 	sf::Vector2f _pos;
 
+	// Default values; Adjust in Tower::createTowerType to properly update
 	float _angle = 0;
 	float _velocity = 0;
 	float _duration = 0;

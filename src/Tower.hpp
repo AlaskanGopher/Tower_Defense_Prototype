@@ -17,6 +17,8 @@ private:
 	sf::Vector2f _pos;
 	sf::Color _fill_color = sf::Color::Red; // Fill color
 	float _angle_facing = 0;  // Angle that tower is looking at
+
+	// Default values; Adjust in Tower::createTowerType to properly update
 	float _damage = 1; // Damage per Projectile
 	float _attack_speed = 1; // Shots per Second
 	float _attack_range = 100; // Range of which the tower can shoot
