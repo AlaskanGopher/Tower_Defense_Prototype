@@ -16,6 +16,7 @@ if(USE_BUNDLED_SFML)
 endif()
 
 if(MSVC)
+	add_compile_options("/wd4244" "/wd4305" "/wd4267")
 	add_link_options("/ENTRY:mainCRTStartup")
 	if(WINDOWS_HIDE_CONSOLE)
 		add_link_options("/SUBSYSTEM:WINDOWS")
