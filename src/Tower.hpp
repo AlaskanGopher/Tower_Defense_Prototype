@@ -56,7 +56,7 @@ public:
 	void setTowerName(std::string name) { _tower_name = name; }
 	void setTowerType(int type) { _tower_type = type; }
 	void setKillCount(int count) { _kill_count = count; }
-	void setDamageDealt(int damage) { _damage_dealt = damage; }
+	void setDamageDealt(float damage) { _damage_dealt = damage; }
 
 	// Get Commands
 	sf::Vector2f getPosition() { return _pos; }
