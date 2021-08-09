@@ -6,6 +6,7 @@
 
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include <cmath>
 
 #define RAD_TO_DEG(rad) ((rad * 180.0f) * (1.0f / M_PI))
 #define DEG_TO_RAD(deg) ((deg * M_PI) / 180.0f)
